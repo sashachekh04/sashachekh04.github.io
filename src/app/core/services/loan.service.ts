@@ -7,12 +7,23 @@ import { data } from "../loan-data/data";
   providedIn: 'root'
 })
 export class LoanService {
-  private dataSourse$!: BehaviorSubject<Loan[]>;
+  private loans$!: BehaviorSubject<Loan[]>;
+  private availableAmount!: number;
 
   constructor() {
-    this.dataSourse$ = new BehaviorSubject<Loan[]>(data)
+    this.loans$ = new BehaviorSubject<Loan[]>(data)
   }
   public get data(): Observable<Loan[]> {
-    return this.dataSourse$.asObservable()
+    return this.loans$.asObservable()
+  }
+  public get availableForInvesting(): number {
+    return this.loans$.value.reduce((acum, current) => acum + current.available, 0)
+  }
+  public changeLoanAvialabel(loan: Loan, currentValue: string, prevValue: number): void {
+    const changedLoan = loan;
+    changedLoan.available = prevValue - (+currentValue)
+    const changedLoanIndex = this.loans$.value.indexOf(loan)
+    this.loans$.value.splice(changedLoanIndex, 1, changedLoan)
+    this.loans$.next([...this.loans$.value])
   }
 }
