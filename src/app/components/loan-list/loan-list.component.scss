@@ -1,0 +1,21 @@
+.wrapper {
+  max-width: 650px;
+  .loan-list {
+    padding: 30px 0;
+    max-width: 100%;
+    .loan-item {
+      list-style-type: none;
+      max-width: 100%;
+    }
+  }
+  .amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 99%;
+    .amount-text {
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+}
