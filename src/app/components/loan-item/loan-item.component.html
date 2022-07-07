@@ -1,8 +1,8 @@
 <div class="loan">
   <div class="loan-column">
     <div class="loan-column-info">
-      <div class="loan-title">Loan name 1</div>
-      <div class="loan-info">Loan details and values</div>
+      <div class="loan-title">{{tranche}}</div>
+      <div class="loan-info">{{title}}</div>
     </div>
   </div>
   <div class="loan-column">
@@ -11,7 +11,7 @@
         class="btn"
         mat-button
         loan-btn
-        (click)="openModal()"
+        (click)="openModal(loanItem)"
         >invest</button>
     </div>
   </div>
