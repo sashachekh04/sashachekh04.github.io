@@ -1,13 +1,13 @@
 <div class="container">
   <div class="wrapper">
     <ul class="loan-list">
-      <li class="loan-item">
-        <app-loan-item></app-loan-item>
+      <li *ngFor="let loan of loanList | async" class="loan-item">
+        <app-loan-item [loanItem]="loan"></app-loan-item>
       </li>
     </ul>
     <div class="amount">
       <div class="amount-text">Total amount available for investment:</div>
-      <div class="amount-text">$238,456</div>
+      <div class="amount-text">${{availabel.toFixed(3)}}</div>
     </div>
   </div>
 </div>
