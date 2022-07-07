@@ -35,22 +35,25 @@
   }
 
   form {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    input {
-      width: 280px;
-      height: 25px;
-      background: #FFFFFF;
-      border: 1px solid rgba(48, 50, 71, 0.1);
-      border-radius: 5px;
-      padding: 5px;
-    }
-    .small-btn {
-      padding: 8px;
-      height: 38px;
-      font-size: 17px;
-      width: 100px;
+
+    .form-content-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      input {
+        width: 280px;
+        height: 25px;
+        background: #FFFFFF;
+        border: 1px solid rgba(48, 50, 71, 0.1);
+        border-radius: 5px;
+        padding: 5px;
+      }
+      .small-btn {
+        padding: 8px;
+        height: 38px;
+        font-size: 17px;
+        width: 100px;
+      }
     }
   }
 }
