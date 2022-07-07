@@ -15,10 +15,10 @@ export class LoanListComponent implements OnInit {
   constructor(private loanService: LoanService) {
     this.loanList$ = this.loanService.data
     this.availabel = this.loanService.availableForInvesting
+    this.loanList$.subscribe(el => this.availabel = this.loanService.availableForInvesting)
   }
 
   ngOnInit(): void {
-    this.loanList.subscribe(el => console.log(el))
   }
 
 }
