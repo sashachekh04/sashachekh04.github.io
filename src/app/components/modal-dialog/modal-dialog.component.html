@@ -11,16 +11,32 @@
      45.25l-105.4 105.4L310.6 361.4z"/></svg>
     </div>
   </div>
+
   <h1 mat-dialog-title>Invest in Loan</h1>
   <div mat-dialog-content>
-    <div class="text subtitle">Loan title you’ve clicked</div>
-    <div class="text available-amount">Amount available: $12,362</div>
-    <div class="text terms">Loan ends in: 1 month 10 days</div>
-
+    <div class="text subtitle">{{data.title}}</div>
+    <div class="text available-amount">Amount available: ${{data.available}}</div>
+    <div class="text terms">Loan ends in:
+      <span *ngIf="timeToEnd.day > 0">{{timeToEnd.day}} days</span>
+      <span *ngIf="timeToEnd.hours > 0">{{timeToEnd.hours}} hours</span>
+      <span *ngIf="timeToEnd.hours === 0">{{timeToEnd.minutes}} minutes</span>
     <div class="mat-dialog-title">Investment amount</div>
-    <form action="" class="modal-form">
-      <input type="text">
-      <button class="btn small-btn">invest</button>
+
+    <form
+      [formGroup]="investForm"
+      (ngSubmit)="onSubmitForm()"
+       class="modal-form">
+      <div class="form-content-wrapper">
+        <input
+          formControlName="amount"
+          type="text">
+        <button
+          type="submit"
+          class="btn small-btn">invest</button>
+      </div>
+      <small *ngIf="investForm.get('amount')?.errors">Please, put only numbers!</small>
     </form>
+
   </div>
+</div>
 </div>
