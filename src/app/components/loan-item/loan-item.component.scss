@@ -1,0 +1,37 @@
+.loan {
+  padding: 30px;
+  width: 90%;
+  min-height: 65px;
+  border-radius: 20px;
+  border: 1px solid rgba(48, 50, 71, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .loan-column {
+    width: 50%;
+    .loan-column-info {
+      .loan-title {
+        color: #303247;
+        font-weight: 600;
+        font-size: 25px;
+        margin-bottom: 15px;
+      }
+  }
+    .loan-column-btn {
+      text-align: end;
+      button {
+        padding: 15px;
+        background-color: #F6E308;
+        font-size: 20px;
+        color: #303247;
+        font-weight: 500;
+        border: none;
+        border-radius: 5px;
+        width: 135px;
+        height: 55px;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+  }
+}
