@@ -31,6 +31,8 @@
           formControlName="amount"
           type="text">
         <button
+          disabled="{{investForm.get('amount')?.errors}}"
+          mat-dialog-close
           type="submit"
           class="btn small-btn">invest</button>
       </div>
