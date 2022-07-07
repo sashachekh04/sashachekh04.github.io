@@ -7,7 +7,12 @@
   </div>
   <div class="loan-column">
     <div class="loan-column-btn">
-      <button class="loan-btn">invest</button>
+      <button
+        class="btn"
+        mat-button
+        loan-btn
+        (click)="openModal()"
+        >invest</button>
     </div>
   </div>
 </div>

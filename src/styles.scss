@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 * {
   margin: 0;
   padding: 0;
@@ -9,4 +10,22 @@
 .container {
   width: 1140px;
   margin: 0 auto;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.btn {
+  padding: 12px;
+  background-color: #F6E308;
+  font-size: 20px;
+  color: #303247;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  width: 135px;
+  height: 55px;
+  text-transform: uppercase;
+  cursor: pointer;
 }

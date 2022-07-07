@@ -16,22 +16,12 @@
         font-size: 25px;
         margin-bottom: 15px;
       }
+      .loan-info {
+        font-size: 16px;
+      }
   }
     .loan-column-btn {
       text-align: end;
-      button {
-        padding: 15px;
-        background-color: #F6E308;
-        font-size: 20px;
-        color: #303247;
-        font-weight: 500;
-        border: none;
-        border-radius: 5px;
-        width: 135px;
-        height: 55px;
-        text-transform: uppercase;
-        cursor: pointer;
-      }
     }
   }
 }

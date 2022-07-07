@@ -1,0 +1,74 @@
+.modal-wrapper {
+  .mat-dialog-actions {
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: 20px;
+    cursor: pointer;
+    .close-btn {
+      width: 27px;
+      height: 27px;
+      svg {
+        width: 27px;
+        height: 27px;
+      }
+    }
+  }
+  .mat-dialog-title {
+    font-size: 30px;
+    color: #303247;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  .text {
+    color: #303247;
+    font-weight: 400;
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+  .available-amount {
+    margin-bottom: 5px;
+  }
+  .terms {
+    margin-bottom: 30px;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    input {
+      width: 280px;
+      height: 25px;
+      background: #FFFFFF;
+      border: 1px solid rgba(48, 50, 71, 0.1);
+      border-radius: 5px;
+      padding: 5px;
+    }
+    .small-btn {
+      padding: 8px;
+      height: 38px;
+      font-size: 17px;
+      width: 100px;
+    }
+  }
+}
+
+
+::ng-deep {
+  .cdk-overlay-pane {
+    width: 500px !important;
+  }
+  .mat-dialog-container {
+    position: relative !important;
+    padding: 60px;
+  }
+  .modal-wrapper {
+    width: 108%;
+  }
+
+}
+//::ng-deep.mat-dialog-container {
+//  padding: 0px !important;
+//}
