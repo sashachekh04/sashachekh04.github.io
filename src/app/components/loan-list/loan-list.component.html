@@ -1,7 +1,7 @@
 <div class="container">
   <div class="wrapper">
     <ul class="loan-list">
-      <li *ngFor="let loan of loanList | async" class="loan-item">
+      <li *ngFor="let loan of loanList$ | async" class="loan-item">
         <app-loan-item [loanItem]="loan"></app-loan-item>
       </li>
     </ul>
