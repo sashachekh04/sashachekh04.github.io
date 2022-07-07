@@ -3,7 +3,7 @@ import { MAT_DIALOG_DATA } from "@angular/material/dialog";
 import { Loan } from "../../core/model/loan";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ValidatePhone } from "../../core/validators/only-numbers";
-// import { onlyNumber } from "../../core/validators/only-numbers";
+import { LoanService } from "../../core/services/loan.service";
 
 @Component({
   selector: 'app-modal-dialog',
@@ -18,7 +18,8 @@ export class ModalDialogComponent implements OnInit {
   })
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: Loan,
-              private fb: FormBuilder) {
+              private fb: FormBuilder,
+              private loanService: LoanService) {
     this.timeToEnd = this.endtime
   }
 
@@ -39,5 +40,6 @@ export class ModalDialogComponent implements OnInit {
       return;
     }
     console.log(this.investForm)
+    this.loanService.changeLoanAvialabel(this.data, this.investForm.get('amount')?.value, this.data.available)
   }
 }
