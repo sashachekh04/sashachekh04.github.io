@@ -9,11 +9,11 @@ import { Loan } from "../../core/model/loan";
   styleUrls: ['./loan-list.component.scss']
 })
 export class LoanListComponent implements OnInit {
-  public loanList: Observable<Loan[]>;
+  public loanList$: Observable<Loan[]>;
   public availabel!: number;
 
   constructor(private loanService: LoanService) {
-    this.loanList = this.loanService.data
+    this.loanList$ = this.loanService.data
     this.availabel = this.loanService.availableForInvesting
   }
 
