@@ -15,7 +15,7 @@
   <h1 mat-dialog-title>Invest in Loan</h1>
   <div mat-dialog-content>
     <div class="text subtitle">{{data.title}}</div>
-    <div class="text available-amount">Amount available: ${{data.available}}</div>
+    <div class="text available-amount">Amount available: ${{data.available.toFixed(3)}}</div>
     <div class="text terms">Loan ends in:
       <span *ngIf="timeToEnd.day > 0">{{timeToEnd.day}} days</span>
       <span *ngIf="timeToEnd.hours > 0">{{timeToEnd.hours}} hours</span>

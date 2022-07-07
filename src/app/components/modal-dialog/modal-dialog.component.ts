@@ -39,7 +39,7 @@ export class ModalDialogComponent implements OnInit {
     if(this.investForm.invalid) {
       return;
     }
-    console.log(this.investForm)
+
     this.loanService.changeLoanAvialabel(this.data, this.investForm.get('amount')?.value, this.data.available)
   }
 }
